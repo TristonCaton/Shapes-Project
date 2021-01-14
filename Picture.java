@@ -2,8 +2,8 @@
 /**
  * Draw a pretty picture composed of shape objects on a canvas
  * 
- * @author: (Your name)
- * @version: (Date)
+ * @author: (Triston Caton)
+ * @version: (1-14-2020)
  * 
  */
 import java.io.File;
@@ -15,13 +15,30 @@ public class Picture {
         Canvas pic = Canvas.getCanvas();
 
         // Set the title and background for the picture
-        pic.setTitle("My Picture");
+        pic.setTitle("Triston C - Midterm Project");
         pic.setBackgroundColor("white");
 
         // Draw my picture
-        Circle c = new Circle();
-        c.makeVisible();
+	Rect Grass = new Rect();
+	Grass.changeColor("green");
+	Grass.moveHorizontal(-500);
+	Grass.moveVertical(300);
+	Grass.makeVisible();
+	Grass.changeSize(500,1000);
 
+	Rect House = new Rect();
+	House.changeColor("brown");
+	House.moveVertical(100);
+	House.moveHorizontal(-100);
+	House.changeSize(200);
+	House.makeVisible();
+
+	Triangle Roof = new Triangle();
+	Roof.changeColor("black");
+	Roof.changeSize(50, 200);
+	Roof.moveVertical(30);
+	Roof.moveHorizontal(100);
+	Roof.makeVisible();
         // Get the filename to save to from the command line arguments, defaulting to
         // MyPicture.png if no argument is given
         String filename;
