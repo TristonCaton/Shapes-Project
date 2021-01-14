@@ -44,7 +44,7 @@ public class Picture {
 	int i = 0;
 	int offset = 0;
 	Circle[] hay = new Circle[13];
-	for(int x = 0; x <= 12; x++){
+	for(int x = 0; x <= 12; x++){ // Initializing all of the classes in the array
 		hay[x] = new Circle();
 		hay[x].changeSize(30);
 		hay[x].changeColor("yellow");
