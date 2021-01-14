@@ -40,28 +40,22 @@ public class Picture {
 	Roof.moveHorizontal(100);
 	Roof.makeVisible();
 
+	Circle leaves[]= new Circle[12];
+	leaves[0].moveHorizontal(i*30);
+	leaves[0].moveVertical(100+offset);
+	leaves[0].makeVisible();
+
 	int numShapes = 3;
-	int i = 0;
-	int offset = 0;
-	Circle[] hay = new Circle[13];
-	for(int x = 0; x <= 12; x++){
-		hay[x] = new Circle();
-		hay[x].changeSize(30);
-		hay[x].changeColor("yellow");
-	}
-	
-	int count = 0;
 	while(numShapes <= 12){
-		System.out.println(i);
-		if(count % 3 == 0){
-			offset += -30;
-			count = 0;
+		int i = 0;
+		int offset = 0;
+		Circle leaves[]= new Circle[12];
+		if(i % 3 == 0){
+			offset = -30;
 		}
-		hay[i].moveHorizontal(230+(count*30));
-		hay[i].moveVertical(330+offset);
-		hay[i].makeVisible();
-		count++;
-		i++;
+		leaves[0].moveHorizontal(i*30);
+		leaves[0].moveVertical(100+offset);
+		leaves[0].makeVisible();
 		numShapes++;
 	}
         // Get the filename to save to from the command line arguments, defaulting to
